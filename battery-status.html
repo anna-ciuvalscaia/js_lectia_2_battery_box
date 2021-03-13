@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baterry Status</title>
+    <style>
+        body {
+            background: #000;
+        }
+       
+        p {
+         text-align: center;
+         padding: 200px;
+         
+        
+        }
+    </style>
+
+</head>
+<body>
+<div>
+<p>
+<img  src="images/8-meo-giúp-iOS-10-thoi-ngon-pin-a.png" alt="bateria">
+</p>
+</div> 
+
+
+<script>
+// IN: Our script reads the battery status data (in %)
+// FACT: the factory settings indicate how long does a % last
+// OUT: calculate how many minutes our device has left
+
+//variabeles
+// camelCase (without prefixes: var, let, const)
+// name: a..zA..Z0..9_
+
+// 70, 100, 10, 0.001, -100 - Numbers
+
+baterryCharge = 70                // %
+
+FULL_BATTERY = 100               // 100% - fully charget battery
+chargePercentInMinutes = 10      // 1% -10 minutes
+
+etWorkInMinutes = baterryCharge * chargePercentInMinutes
+
+// display functions
+
+alert ( "remaining time (minutes)" + " " + "->" + " " + etWorkInMinutes ) // plain text
+
+// "remaining time (minutes)" - String (text)
+
+// HW1: calculate it in HOURS
+
+minutesInHours = 60 // 60 minutes in hours
+
+etWorkInHours = Math.floor(etWorkInMinutes / minutesInHours) 
+etWorkInMinutes1 = etWorkInMinutes % minutesInHours
+alert ( "remaining time " + " -> " + etWorkInHours + " h" + " " + etWorkInMinutes1 + " min" )
+
+</script>
+
+</body>
+
+</html>
